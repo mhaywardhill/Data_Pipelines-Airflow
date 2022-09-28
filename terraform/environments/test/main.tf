@@ -19,5 +19,6 @@ module "EC2" {
 	source		= "../../modules/EC2"
 	subnet_id 		= module.VPC.subnet_id
 	airflow_sg_id	= module.securitygroups.airflow_sg_id
+	key_name		= var.key_name
 	depends_on 		= [module.securitygroups]
 }
