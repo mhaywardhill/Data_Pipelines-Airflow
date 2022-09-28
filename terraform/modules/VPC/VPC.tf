@@ -8,8 +8,9 @@ resource "aws_internet_gateway" "IGW" {
 
 
 resource "aws_subnet" "mypublicsubnet" {  
-   vpc_id =  aws_vpc.my-vpc.id
-   cidr_block = var.pubsubcidr
+   vpc_id 			=  aws_vpc.my-vpc.id
+   availability_zone 	= "us-west-2c"
+   cidr_block 		= var.pubsubcidr
  }
 
 
